@@ -11,12 +11,10 @@ return new class extends Migration
         Schema::create('gajis', function (Blueprint $table) {
             $table->id();
 
-            // relasi ke karyawan (WAJIB)
             $table->foreignId('karyawan_id')
                   ->constrained('karyawans')
                   ->onDelete('cascade');
 
-            // kolom gaji
             $table->integer('gaji');
 
             $table->timestamps();

@@ -7,29 +7,25 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gray-700 min-h-screen flex items-center justify-center">
 
-    <div class="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <div class="bg-gray-500 shadow-md rounded-lg p-6 w-full max-w-md">
 
-        <!-- Judul -->
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+        <h2 class="text-2xl font-bold text-red-800 mb-4">
             Tambah Data Gaji
         </h2>
 
-        <!-- Kembali -->
         <div class="mb-4">
-            <a href="{{ route('gaji') }}" class="text-blue-600 hover:underline text-sm">
+            <a href="{{ route('gaji') }}" class="text-red-800 hover:underline text-sm">
                 ← Kembali
             </a>
         </div>
 
-        <!-- Form -->
         <form action="{{ route('gaji.create') }}" method="POST" class="space-y-4">
             @csrf
 
-            <!-- Pilih Karyawan -->
             <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">
+                <label class="block text-sm font-medium text-white mb-1">
                     Pilih Karyawan
                 </label>
 
@@ -52,9 +48,8 @@
                 </select>
             </div>
 
-            <!-- Input Gaji -->
             <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">
+                <label class="block text-sm font-medium text-white mb-1">
                     Gaji
                 </label>
 
@@ -67,10 +62,9 @@
                 >
             </div>
 
-            <!-- Button -->
             <button 
                 type="submit" 
-                class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+                class="w-full bg-red-800 text-white py-2 rounded-md hover:bg-red-900 transition">
                 Simpan
             </button>
 

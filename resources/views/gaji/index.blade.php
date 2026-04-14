@@ -11,12 +11,10 @@
 
     <div class="max-w-4xl mx-auto bg-gray-500 shadow-md rounded-lg p-6 border border-red-100">
 
-        <!-- Judul -->
         <h2 class="text-2xl font-bold text-red-800 mb-4">
             Informasi Salary
         </h2>
 
-        <!-- Search -->
         <form method="GET" action="{{ route('gaji') }}" class="mb-4 flex gap-2">
 
             <input 
@@ -35,7 +33,6 @@
 
         </form>
 
-        <!-- Tombol tambah -->
         <div class="mb-4">
             <a href="{{ route('gaji.tambah') }}" 
                class="bg-red-800 text-white px-4 py-2 rounded hover:bg-red-900">
@@ -43,7 +40,6 @@
             </a>
         </div>
 
-        <!-- Tabel -->
         <div class="overflow-x-auto">
             <table class="w-full border border-red-100 text-sm">
 
@@ -82,7 +78,7 @@
                                     <input type="hidden" name="_method" value="DELETE">
 
                                     <button type="submit" 
-                                            class="text-red-600 hover:underline">
+                                            class="text-red-800 hover:underline">
                                         Delete
                                     </button>
                                 </form>
@@ -94,7 +90,6 @@
 
             </table>
 
-            <!-- Tombol kembali -->
             <div class="mt-4">
                 <a href="{{ route('karyawan') }}" 
                    class="text-red-700 hover:underline">

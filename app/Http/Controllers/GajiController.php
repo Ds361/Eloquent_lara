@@ -27,32 +27,26 @@ class GajiController extends Controller
     // CREATE (Form tambah)
     public function show()
     {
-        // ambil semua karyawan untuk dropdown
         $karyawan = Karyawan::all();
 
         return view('gaji.tambah', compact('karyawan'));
     }
 
-    // STORE (Simpan data)
     public function store(Request $request)
     {
-        // validasi
         $validatedData = $request->validate([
             'karyawan_id' => 'required',
             'gaji' => 'required|numeric',
         ]);
 
-        // simpan ke database
         Gaji::create([
             'karyawan_id' => $validatedData['karyawan_id'],
             'gaji' => $validatedData['gaji'],
         ]);
 
-        // redirect ke halaman index
         return redirect('/gaji');
     }
 
-    // EDIT (Form edit)
     public function edit($id)
     {
         $gaji = Gaji::findOrFail($id);
